@@ -35,9 +35,7 @@ function getWeather(data) {
 
       let currentIcon = data.current.weather[0].icon;
       let currentWeatherIcon = $("<img>");
-      currentWeatherIcon.attr(
-        "src",
-        "http://openweathermap.org/img/wn/" + currentIcon + "@2x.png"
+      currentWeatherIcon.attr("src","https://openweathermap.org/img/wn/" + currentIcon + "@2x.png"
       );
       cityNameEl.append(currentWeatherIcon);
 
@@ -86,7 +84,7 @@ function getWeather(data) {
         let cardBody = document.createElement("div");
         cardBody.classList.add("card-body");
         cardBody.innerHTML = `<h6>${date}</h6>
-                              <img src= "http://openweathermap.org/img/wn/${icon}.png"> </><br>
+                              <img src= "https://openweathermap.org/img/wn/${icon}.png"> </><br>
                               ${temp} °F<br>
                               ${wind} MPH <br>
                               ${humidity}%`;
@@ -117,7 +115,7 @@ function displaySearchHistory() {
 // =================Coordinates==========================
 
 function getCoordinates() {
-  let queryURL = `http://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=` + APIKey;
+  let queryURL = `https://api.openweathermap.org/data/2.5/weather?q=${currentCity}&appid=` + APIKey;
 
   let storedCities = JSON.parse(localStorage.getItem("cities")) || [];
 
