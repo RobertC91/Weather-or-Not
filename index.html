@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./assets/style/style.css" />
+    <title>5-Day Forecast</title>
+  </head>
+
+  <body class="container">
+    <header class="row text-center bg-dark text-white">
+      <h1>Weather Dashboard</h1>
+    </header>
+    <main>
+      <div class="row">
+        <section class="column col-3">
+          <form>
+            <label class="text-dark fw-bold">Search for a City:</label>
+            <input
+              class="form-control my-2 text-dark"
+              type="search"
+              placeholder="Enter a location"
+              id="city-input"
+            />
+            <button
+              class="btn btn-dark my-2"
+              style="width: 100%"
+              type="submit"
+              id="search-button"
+            >
+              Search City
+            </button>
+          </form>
+
+          <button
+            class="btn btn-dark my-2"
+            style="width: 100%"
+            type="submit"
+            id="clear-button"
+          >
+            Clear History
+          </button>
+
+          <div class="border-top border-dark" id="searched"></div>
+        </section>
+
+        <!-- -----------------------------------Weather Boxes----------------------------------------------------- -->
+
+        <div class="column col-9">
+          <div class="row bg-white" id="currentConditions"></div>
+
+          <div class="row" id="fiveDayForecastHeader"></div>
+
+          <div
+            class="d-flex flex-row flex-wrap justify-content-between"
+            class="forecast"
+            id="fiveDayForecast"
+          ></div>
+        </div>
+      </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/dayjs@1.11.3/dayjs.min.js"
+      integrity="sha256-iu/zLUB+QgISXBLCW/mcDi/rnf4m4uEDO0wauy76x7U="
+      crossorigin="anonymous"
+    ></script>
+    <script src="./assets/script/script.js"></script>
+  </body>
+</html>
